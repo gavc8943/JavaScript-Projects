@@ -6,5 +6,12 @@
     <title>Document</title>
     <script src="JS/main.js"></script>
   </head>
-  <body></body>
+  <body>
+    <h1>My onclick Event</h1>
+    <button onclick="document.getElementById('demo').innerHTML=Date()">
+      The Time is?
+    </button>
+    <p id="demo"></p>
+    <button onclick="this.innerHTML=Date()">The Time is?</button>
+  </body>
 </html>
