@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function Challenge</title>
+  </head>
+  <body>
+    <h1>My Normal Function</h1>
+
+    <p id="multiply"></p>
+    <script>
+      function myFunction(a, b) {
+        return a * b;
+      }
+      document.getElementById("multiply").innerHTML = myFunction(4, 8);
+    </script>
+    <!--Turning my Function into an arrow function(name of the function was changed for it to be able to work)-->
+    <h2>My Arrow Function</h2>
+    <p id="multiply2"></p>
+    <script>
+      let myArrowFunction = (a, b) => a * b;
+      document.getElementById("multiply2").innerHTML = myFunction(6, 8);
+    </script>
+    <!--Using the Sum Method-->
+    <h3>The Some() Method</h3>
+    <p>The some() method checks if some array values pass a test</p>
+    <p id="some"></p>
+    <script>
+      const nums = [4, 8, 9, 13, 65, 43];
+      let overThirty = nums.some(someFunction);
+      document.getElementById("some").innerHTML =
+        "Number over 30 is " + overThirty;
+
+      function someFunction(value, index, array) {
+        return value > 30;
+      }
+    </script>
+    <h4>The Some() Method with an arrow function</h4>
+    <p id="arrow"></p>
+    <script>
+      let arrowFunction = (value, index, array) => value < 10;
+      const nums2 = [22, 7, 54, 87, 65, 45];
+      let underTen = nums2.some(arrowFunction);
+      document.getElementById("arrow").innerHTML =
+        "Number less than ten is " + underTen;
+    </script>
+  </body>
+</html>
