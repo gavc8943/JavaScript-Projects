@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elements Challenge</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>The Document Object</h1>
+    <h2>
+      The createElement() Method and The createAttribute() and
+      setAttributeNode() Methods
+    </h2>
+
+    <p>Creating a p element with some text</p>
+
+    <p>
+      Click "Add" to create a class attribute and add it to first h1 element.
+    </p>
+    <button onclick="myFunction()">Add</button>
+    <script>
+      function myFunction() {
+        // Create a class attribute:
+        const att = document.createAttribute("class");
+
+        // Set a value of the class attribute
+        att.value = "democlass";
+
+        // Add the class attribute to the first h1;
+        document.getElementsByTagName("h1")[0].setAttributeNode(att);
+      }
+    </script>
+  </body>
+</html>
