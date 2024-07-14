@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="XML_Example"></p>
+    <script>
+      var XML_Parser, XML_Document;
+      // creates a text string
+      var Book =
+        "<book>" +
+        "<title>Moby Dick List</title>" +
+        "<author>Herman Melville</author>" +
+        "<genre>Adventure Fiction</genre>" +
+        "<published>1851</published>" +
+        "</book>";
+      // Creates an XML Dom parser
+      XML_Parser = new DOMParser();
+
+      // creates a new XML DOM object using the text string
+      XML_Document = XML_Parser.parseFromString(Book, "text/xml");
+
+      document.getElementById("XML_Example").innerHTML =
+        XML_Document.getElementsByTagName("author")[0].childNodes[0].nodeValue;
+    </script>
+  </body>
+</html>
